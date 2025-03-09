@@ -1,15 +1,22 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Link, NavLink} from "react-router-dom";
 import LogoImg from "../../assets/logo.png"
 import { FaCaretDown } from "react-icons/fa";
+import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
+import ResponsiveMenu from "./ResponsiveMenu";
 
 const DropdownLinks = [
-  { name: "Out Services", link: "/Services" },
-  { name: "Top Brands", link: "/Brands" },
-  { name: "Location", link: "/Location" },
+  { name: "Out Services", link: "/#Services" },
+  { name: "Top Brands", link: "/#mobile_rands" },
+  { name: "Location", link: "/#location" },
 ]
 
 const Navbar = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  }
   return (
     <>
     <div className="fixed top-0 right-0 w-full bg-white text-black shadow-md">
@@ -82,14 +89,30 @@ const Navbar = () => {
           </div>
 
           {/* Book Now button */}
-          <div>
+          <div className="flex items-center gap-4">
             <button className="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:bg-primary
             transition-all duration-600 text-white px-3 py-1 rounded-full">
               Book Now
             </button>
           </div>
+
+          {/* Mobile Hamburger Menu */}
+          <div className="md:hidden block">
+            {showMenu? (
+              <HiMenuAlt1 onClick={toggleMenu} 
+                className="cursor-pointer transition-all" 
+                size={30}
+              />
+            ):(
+              <HiMenuAlt3 onClick={toggleMenu} 
+                className="cursor-pointer transition-all" 
+                size={30}
+              />
+            )}
+          </div>
         </div>
       </div>
+      <ResponsiveMenu setShowMenu={setShowMenu} showMenu={showMenu}/>
     </div>
       
     </>
