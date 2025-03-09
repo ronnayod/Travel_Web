@@ -80,6 +80,14 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
+
+          {/* Book Now button */}
+          <div>
+            <button className="bg-gradient-to-r from-primary to-secondary hover:from-secondary hover:bg-primary
+            transition-all duration-600 text-white px-3 py-1 rounded-full">
+              Book Now
+            </button>
+          </div>
         </div>
       </div>
     </div>
