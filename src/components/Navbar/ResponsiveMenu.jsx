@@ -51,7 +51,7 @@ const ResponsiveMenu = ({showMenu, setShowMenu}) => {
                   <Link to={link} onClick={() => setShowMenu(false)}
                   className="mb-5 inline-block"
                   >
-                    {{name}}
+                    {name}
                   </Link>
                 </li>
               ))
