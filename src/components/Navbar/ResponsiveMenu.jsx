@@ -46,8 +46,8 @@ const ResponsiveMenu = ({showMenu, setShowMenu}) => {
         <div className="text-black mt-12">
           <ul className="space-y-4 text-xl">
             {
-              navbarLinks.map(({ name, link }) => (
-                <li>
+              navbarLinks.map(({ name, link }, index) => (
+                <li key={index}>  {/* เพิ่ม key ที่นี่ */}
                   <Link to={link} onClick={() => setShowMenu(false)}
                   className="mb-5 inline-block"
                   >
