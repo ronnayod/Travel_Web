@@ -1,6 +1,7 @@
 import React from 'react';
 import MainVid from '../assets/video/main.mp4';
 import Hero from '../components/Hero/Hero.jsx'; 
+import Places from '../components/Places/Places.jsx'; 
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
           </video>
           <Hero />
         </div>
+        <Places />
       </div>
     </>
   )
