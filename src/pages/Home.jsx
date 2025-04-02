@@ -6,6 +6,7 @@ import BannerImg from '../components/BannerImg/BannerImg.jsx';
 import Poster from '../assets/cover-women.jpg'; 
 import Banner2 from '../assets/travel-cover2.jpg'; 
 import Blogs from '../pages/Blogs.jsx'; 
+import Banner from '../components/Banner/Banner.jsx'; 
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
         <Places />
         <BannerImg img={Poster} />
         <Blogs />
+        <Banner />
       </div>
     </>
   )
