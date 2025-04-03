@@ -42,3 +42,6 @@ npm install react-icons
 npm install react-router-dom
 
 npm i aos
+
+npm i react-slick
+npm i slick-carousel
