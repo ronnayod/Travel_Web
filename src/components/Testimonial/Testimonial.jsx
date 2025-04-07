@@ -89,7 +89,7 @@ const Testimonial = () => {
                     <img src={img} alt="" className="rounded-full block mx-auto" />
                     <h1 className="text-xl font-bold">{name}</h1>
                     <p className="text-gray-500 text-sm">{text}</p>
-                    <p className="text-balance/20 text-9xl font-serif absolute top-0 right-0">,,</p>
+                    <p className="text-black/20 text-9xl font-serif absolute top-0 right-0">,,</p>
                   </div>
                 </div>
               );
